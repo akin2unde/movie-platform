@@ -1,0 +1,28 @@
+.app-layout {
+  width: 100svw;
+  height: 100svh;
+  display: grid;
+  // grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.app-content {
+  position: relative;
+}
+
+.main-section {
+  padding: 72px 16px 16px 16px;
+  // height: 100svh;
+  overflow-y: auto;
+  background: rgba(242, 244, 244, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .app-layout {
+    display: block;
+  }
+
+  .main-section {
+    padding: 64px 0px 8px 0px;
+    height: 100svh;
+  }
+}
