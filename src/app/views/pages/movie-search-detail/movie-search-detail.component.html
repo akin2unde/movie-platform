@@ -1,1 +1,34 @@
-<p>movie-search-detail works!</p>
+<div class="d-flex">
+    <div class="mr-20">
+        <img src={{data?.Poster}}/>
+    </div>
+    <div class="ml-auto bold">
+        <div class="">Plots: {{data?.Plots}}</div>
+        <div class="">Title: {{data?.Title}}</div>
+        <div class="">Year: {{data?.Year}}</div>
+        <div class="">Rated: {{data?.Rated}}</div>
+        <div class="">Released: {{data?.Released}}</div>
+        <div class="">Runtime: {{data?.Runtime}}</div>
+        <div class="">Genre: {{data?.Genre}}</div>
+        <div class="">Writer: {{data?.Writer}}</div>
+        <div class="">Director: {{data?.Director}}</div>
+        <div class="">Actors: {{data?.Actors}}</div>
+        <div class="">Writer: {{data?.Writer}}</div>
+        <div class="">Language: {{data?.Language}}</div>
+        <div class="">Country: {{data?.Country}}</div>
+        <div class="">Awards: {{data?.Awards}}</div>
+        <div class="">Metascore: {{data?.Metascore}}</div>
+        <div class="">imdbRating: {{data?.imdbRating}}</div>
+        <div class="">imdbVotes: {{data?.imdbVotes}}</div>
+        <div class="">imdbID: {{data?.imdbID}}</div>
+        <div class="">Type: {{data?.Type}}</div>
+        <div class="">DVD: {{data?.DVD}}</div>
+        <div class="">BoxOffice: {{data?.BoxOffice}}</div>
+        <div class="">Production: {{data?.Production}}</div>
+        <div class="">Website: {{data?.Website}}</div>
+        <div class="">Response: {{data?.Response}}</div>
+        <div>
+            Ratings: <span class="" *ngFor="let d of rating"> {{d.Source}}: ({{d.Value}}),</span>
+        </div>
+    </div>
+</div>

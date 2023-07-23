@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppBaseComponent } from 'src/app/core/base-component/app-base.component';
 import { Movie } from 'src/app/models/movie';
+import { Rating } from 'src/app/models/rating';
 import Store, { AppKey } from 'src/app/shared/store';
 
 @Component({
@@ -11,6 +12,7 @@ import Store, { AppKey } from 'src/app/shared/store';
 })
 export class MovieSearchDetailComponent extends AppBaseComponent{
   data?:Movie;
+  rating: Rating[]=[];
   constructor(private pgRoute:Router) {
     super(pgRoute);
   }
@@ -22,6 +24,7 @@ export class MovieSearchDetailComponent extends AppBaseComponent{
     }
     else{
       this.data= movie;
+      this.rating = this.data.Ratings;
     }
   }
 }
