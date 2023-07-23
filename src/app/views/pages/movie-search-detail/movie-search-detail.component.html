@@ -28,7 +28,7 @@
         <div class="">Website: {{data?.Website}}</div>
         <div class="">Response: {{data?.Response}}</div>
         <div>
-            Rating: <span class="" *ngFor="let d of rating">{{d.Source}}:({{d.Value}})</span>
+            Ratings: <span class="" *ngFor="let d of rating"> {{d.Source}}: ({{d.Value}}),</span>
         </div>
     </div>
 </div>
