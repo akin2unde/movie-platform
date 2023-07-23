@@ -1,13 +1,17 @@
 
 <div class="container">
-    <div  [ngClass]="{'box-search-focus':searchFocus}" class="box-search p-inputgroup w-30rem bg-white-alpha-90">
-        <input [(ngModel)]="searchString" (keyup.enter)="searchMovie()" (blur)="searchFocus=false" (focus)="searchFocus=true" class="border-none app-search-input" type="text" pInputText placeholder="Keyword" />
-        <img (click)="searchMovie()" class="border-round px-2 cursor-pointer" [src]="getSvg('black-search.svg')"/>
-    </div>
+    
     <p-panel class="panelbox">
         <ng-template pTemplate="header"> 
-            <p-button [disabled]="last5Searched.length==0"  styleClass="gap-1 p-button-rounded text-white-alpha-90 app-bg-primary-1 border-none py-2 px-3" label="Last 5 Searched Movies" (click)="showLast5Searched()">
+            <div  [ngClass]="{'box-search-focus':searchFocus}" class="box-search p-inputgroup w-30rem bg-white-alpha-90">
+                <input [(ngModel)]="searchString" (keyup.enter)="searchMovie()" (blur)="searchFocus=false" (focus)="searchFocus=true" class="border-none app-search-input" type="text" pInputText placeholder="Keyword" />
+                <img (click)="searchMovie()" class="img-serach px-2 cursor-pointer" [src]="getSvg('black-search.svg')"/>
+            </div>
+            <div class="flex-row last5movie">
+                 <p-button [disabled]="last5Searched.length==0"  styleClass="gap-1 p-button-rounded text-white-alpha-90 app-bg-primary-1 border-none py-2 px-3" label="Last 5 Searched Movies" (click)="showLast5Searched()">
             </p-button> 
+            </div>
+           
         </ng-template>
         <div class="card-container">
             <ng-template ngFor let-d [ngForOf]="data">
@@ -20,13 +24,12 @@
                     </p>
                     <ng-template pTemplate="footer">
                         <p-button (click)="viewDetail(d)" label="View" icon="pi pi-check"></p-button>
-                        <!-- <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button> -->
                     </ng-template>
                 </p-card> 
              </ng-template>
 
         </div>
-         <ng-template pTemplate="footer"> Footer content here </ng-template>
+         <!-- <ng-template pTemplate="footer"> Footer content here </ng-template> -->
     </p-panel>
 </div>
 
