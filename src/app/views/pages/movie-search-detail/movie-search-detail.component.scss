@@ -1,6 +1,4 @@
-.d-flex{
-    display: flex;
-}
+
 .bold {
     font-weight: 600;
 }
@@ -13,3 +11,18 @@
     // flex-direction: column;
 
 }
+.scroll{
+  overflow: auto;
+}
+
+     /* Mobile View */
+     @media screen and (min-width:250px) and (max-width:790px) {
+        .flex-row{
+           flex-direction: column;
+           height: 100%;
+           padding-bottom: 10px;
+        }
+        .img{
+            width: 100%;
+        }
+      }

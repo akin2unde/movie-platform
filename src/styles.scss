@@ -88,7 +88,10 @@
   box-shadow: var(--app-primary-1) !important;
 }
 
-
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
 
 @media screen and (max-width: 768px) {
   body {

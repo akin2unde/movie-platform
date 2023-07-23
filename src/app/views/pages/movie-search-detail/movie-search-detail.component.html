@@ -1,34 +1,34 @@
-<div class="d-flex">
+<div class="flex-row">
     <div class="mr-20">
-        <img src={{data?.Poster}}/>
+        <img class="img" src={{data?.Poster}}/>
     </div>
-    <div class="ml-auto bold">
-        <div class="">Plots: {{data?.Plots}}</div>
-        <div class="">Title: {{data?.Title}}</div>
-        <div class="">Year: {{data?.Year}}</div>
-        <div class="">Rated: {{data?.Rated}}</div>
-        <div class="">Released: {{data?.Released}}</div>
-        <div class="">Runtime: {{data?.Runtime}}</div>
-        <div class="">Genre: {{data?.Genre}}</div>
-        <div class="">Writer: {{data?.Writer}}</div>
-        <div class="">Director: {{data?.Director}}</div>
-        <div class="">Actors: {{data?.Actors}}</div>
-        <div class="">Writer: {{data?.Writer}}</div>
-        <div class="">Language: {{data?.Language}}</div>
-        <div class="">Country: {{data?.Country}}</div>
-        <div class="">Awards: {{data?.Awards}}</div>
-        <div class="">Metascore: {{data?.Metascore}}</div>
-        <div class="">imdbRating: {{data?.imdbRating}}</div>
-        <div class="">imdbVotes: {{data?.imdbVotes}}</div>
-        <div class="">imdbID: {{data?.imdbID}}</div>
-        <div class="">Type: {{data?.Type}}</div>
-        <div class="">DVD: {{data?.DVD}}</div>
-        <div class="">BoxOffice: {{data?.BoxOffice}}</div>
-        <div class="">Production: {{data?.Production}}</div>
-        <div class="">Website: {{data?.Website}}</div>
-        <div class="">Response: {{data?.Response}}</div>
+    <div class="ml-auto bold scroll">
+        <p>Plot: {{data?.Plot}}</p>
+        <p>Title: {{data?.Title}}</p>
+        <p>Year: {{data?.Year}}</p>
+        <p>Rated: {{data?.Rated}}</p>
+        <p>Released: {{data?.Released}}</p>
+        <p>Runtime: {{data?.Runtime}}</p>
+        <p>Genre: {{data?.Genre}}</p>
+        <p>Writer: {{data?.Writer}}</p>
+        <p>Director: {{data?.Director}}</p>
+        <p>Actors: {{data?.Actors}}</p>
+        <p>Writer: {{data?.Writer}}</p>
+        <p>Language: {{data?.Language}}</p>
+        <p>Country: {{data?.Country}}</p>
+        <p>Awards: {{data?.Awards}}</p>
+        <p>Metascore: {{data?.Metascore}}</p>
+        <p>imdbRating: {{data?.imdbRating}}</p>
+        <p>imdbVotes: {{data?.imdbVotes}}</p>
+        <p>imdbID: {{data?.imdbID}}</p>
+        <p>Type: {{data?.Type}}</p>
+        <p>DVD: {{data?.DVD}}</p>
+        <p>BoxOffice: {{data?.BoxOffice}}</p>
+        <p>Production: {{data?.Production}}</p>
+        <p>Website: {{data?.Website}}</p>
+        <p>Response: {{data?.Response}}</p>
         <div>
-            Ratings: <span class="" *ngFor="let d of rating"> {{d.Source}}: ({{d.Value}}),</span>
+            Ratings: <span  *ngFor="let d of rating"> {{d.Source}}: ({{d.Value}})</span>
         </div>
     </div>
 </div>
