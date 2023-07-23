@@ -4,10 +4,24 @@
     height: 100%;
 }
 .img{
-    height: 200px;
+    height: 30vh;
+    object-fit: fill;
 }
 .p-2{
     padding: 4rem;
+}
+.last5movie{
+    width: 60%;
+    justify-content: end;
+}
+.app-search-input{
+     
+    border: none!important;
+}
+.img-serach{
+    cursor: pointer;
+    width: 20px;
+    margin: 0px 5px;
 }
 .d-flex{
     display: flex;
@@ -16,9 +30,12 @@
     display: flex;
     flex-direction: row;
 }
+.border-none{
+    border: none;
+}
 .card-container{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     padding: 30px;
@@ -28,17 +45,19 @@
     margin: 2rem;
 }
 .panelbox{
-    height: 90%;
+    height: 100%;
     display: flex;
 }
 :host ::ng-deep .p-panel.p-component {
-    height: 90%;
+    height: 100%;
     width: 100%;
 }
 :host ::ng-deep .p-panel .p-panel-header {
-    background: green !important;
+    background: #dee2e6 !important;
     color: white !important;
     height: 10%;
+    display: flex;
+    flex-direction: row;
 }
 :host ::ng-deep .p-panel .p-toggleable-content {
     height: 100%;
@@ -48,6 +67,35 @@
     color: black !important;
     font-weight: 500;
     font-size: 18px;
-    height: 100%;
-
+    height: 90%;
+    overflow: auto;
 }
+
+        /* Mobile View */
+        @media screen and (min-width:250px) and (max-width:790px) {
+            .card-container{
+                grid-template-columns: 100% ;
+            }
+            .img{
+                height: 40vh;
+            }
+          }
+    
+           /* Tablet View */ /* Laptop View */
+           @media screen and (min-width:800px) and (max-width:899px) {
+            .card-container{
+                grid-template-columns: 50% 50%;
+            }
+            .img{
+                height: 30vh;
+            }
+          }
+           /* Laptop View */
+           @media screen and (min-width:900px) and (max-width:1200px) {
+            .card-container{
+                grid-template-columns: 33.33% 33.33% 33.33%  ;
+            }
+            .img{
+                height: 30vh;
+            }
+          }
