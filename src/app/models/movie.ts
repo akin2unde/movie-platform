@@ -10,7 +10,7 @@ export interface Movie {
     Director: string;
     Writer: string;
     Actors: string;
-    Plots: string;
+    Plot: string;
     Language: string;
     Country: string;
     Awards: string;

@@ -4,7 +4,7 @@
     <p-panel class="panelbox">
         <ng-template pTemplate="header"> 
             <div  [ngClass]="{'box-search-focus':searchFocus}" class="box-search p-inputgroup w-30rem bg-white-alpha-90">
-                <input [(ngModel)]="searchString" (keyup.enter)="searchMovie()" (blur)="searchFocus=false" (focus)="searchFocus=true" class="border-none app-search-input" type="text" pInputText placeholder="Keyword" />
+                <input [(ngModel)]="searchString" (keyup.enter)="searchMovie()" (blur)="searchFocus=false" (focus)="searchFocus=true" class="border-none app-search-input" type="text" pInputText placeholder="Search movie by title" />
                 <img (click)="searchMovie()" class="img-serach px-2 cursor-pointer" [src]="getSvg('black-search.svg')"/>
             </div>
             <div class="flex-row last5movie">
@@ -29,7 +29,6 @@
              </ng-template>
 
         </div>
-         <!-- <ng-template pTemplate="footer"> Footer content here </ng-template> -->
     </p-panel>
 </div>
 
